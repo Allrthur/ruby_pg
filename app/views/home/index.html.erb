@@ -1,4 +1,21 @@
 <h1>Homepage</h1>
 <p>Hello World</p>
-<a>This is my homepage, it isn't much, but its honest work</a>
-<%= yield%>
+<a>This is my homepage, it isnt much, but its honest work</a>
+
+<table>
+    <tr>
+        <th>title</th>
+        <th>body</th>
+    </tr>    
+    <% @rituals.each do |ritual| %>
+        <tr>
+            <td>
+                <%= ritual.title %>
+            </td>
+            <td>
+                <%= ritual.body %>
+            </td>
+        </tr>
+    <% end %>
+    
+</table>
