@@ -30,3 +30,24 @@ body > div {
     color:aliceblue;
     text-decoration: none;
 }
+
+table, th{
+    border-collapse: collapse;
+}
+
+table {
+    border-color: black;
+    border-width: 1px;
+    border: solid;
+    
+    background-color: aliceblue;
+}
+
+th, tr, td{
+    padding: 0px 20px;
+    
+    border:solid;
+    border-color:black;
+    border-width: 1px;
+    border-collapse: collapse;
+}
