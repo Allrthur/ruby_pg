@@ -65,6 +65,6 @@ class RitualsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ritual_params
-      params.require(:ritual).permit(:title, :body)
+      params.require(:ritual).permit(:title, :description)
     end
 end

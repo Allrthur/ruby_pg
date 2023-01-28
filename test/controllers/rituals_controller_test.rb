@@ -17,7 +17,7 @@ class RitualsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ritual" do
     assert_difference('Ritual.count') do
-      post rituals_url, params: { ritual: { body: @ritual.body, title: @ritual.title } }
+      post rituals_url, params: { ritual: { description: @ritual.description, title: @ritual.title } }
     end
 
     assert_redirected_to ritual_url(Ritual.last)
@@ -34,7 +34,7 @@ class RitualsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update ritual" do
-    patch ritual_url(@ritual), params: { ritual: { body: @ritual.body, title: @ritual.title } }
+    patch ritual_url(@ritual), params: { ritual: { description: @ritual.description, title: @ritual.title } }
     assert_redirected_to ritual_url(@ritual)
   end
 

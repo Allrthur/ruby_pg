@@ -1,7 +1,10 @@
 <h1>Homepage</h1>
 <h2>Rituals</h2>
-<a>The following is a table, showing stuff in my PostgreSQL database</a>
 
+<%= render 'rituals/form' , ritual: @ritual %>
+
+
+<p>The following is a table, showing stuff in my PostgreSQL database</p>
 <table>
     <tr>
         <th>TITLE</th>
@@ -13,7 +16,7 @@
                 <%= ritual.title %>
             </td>
             <td>
-                <%= ritual.body %>
+                <%= ritual.description %>
             </td>
         </tr>
     <% end %>

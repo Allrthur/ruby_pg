@@ -14,7 +14,7 @@ class RitualsTest < ApplicationSystemTestCase
     visit rituals_url
     click_on "New Ritual"
 
-    fill_in "Body", with: @ritual.body
+    fill_in "Description", with: @ritual.description
     fill_in "Title", with: @ritual.title
     click_on "Create Ritual"
 
@@ -26,7 +26,7 @@ class RitualsTest < ApplicationSystemTestCase
     visit rituals_url
     click_on "Edit", match: :first
 
-    fill_in "Body", with: @ritual.body
+    fill_in "Description", with: @ritual.description
     fill_in "Title", with: @ritual.title
     click_on "Update Ritual"
 
