@@ -25,13 +25,17 @@ class RitualsController < ApplicationController
 
     respond_to do |format|
       if @ritual.save
+        '''
         format.html { redirect_to ritual_url(@ritual), notice: "Ritual was successfully created." }
         format.json { render :show, status: :created, location: @ritual }
+        '''
+        format.html { redirect_to '/', notice: "Ritual was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @ritual.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /rituals/1 or /rituals/1.json
@@ -52,7 +56,8 @@ class RitualsController < ApplicationController
     @ritual.destroy
 
     respond_to do |format|
-      format.html { redirect_to rituals_url, notice: "Ritual was successfully destroyed." }
+      # format.html { redirect_to rituals_url, notice: "Ritual was successfully destroyed." }
+      format.html { redirect_to '/', notice: "Ritual was successfully destroyed." }
       format.json { head :no_content }
     end
   end
