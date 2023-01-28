@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ritual.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @ritual.body %>
+</p>
+
+<%= link_to 'Edit', edit_ritual_path(@ritual) %> |
+<%= link_to 'Back', rituals_path %>
