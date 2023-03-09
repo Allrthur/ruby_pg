@@ -7,11 +7,16 @@
 <p>The following is a table, showing stuff in my PostgreSQL database</p>
 <table>
     <tr>
+        <th>ID</th>
         <th>TITLE</th>
         <th>BODY</th>
+        <th>ACTIONS</th>
     </tr>    
     <% @rituals.each do |ritual| %>
         <tr>
+            <td>
+                <%= ritual.id %>
+            </td>
             <td>
                 <%= ritual.title %>
             </td>
@@ -20,6 +25,7 @@
             </td>
             <td>
                 <%= link_to 'Destroy', ritual, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Edit', ritual, method: :edit, data:{} %>
             </td>
         </tr>
     <% end %>
