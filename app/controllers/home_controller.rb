@@ -3,4 +3,7 @@ class HomeController < ApplicationController
     @rituals = Ritual.all
     @ritual = Ritual.new
   end
+
+  def edit
+  end
 end

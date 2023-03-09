@@ -25,7 +25,7 @@
             </td>
             <td>
                 <%= link_to 'Destroy', ritual, method: :delete, data: { confirm: 'Are you sure?' } %>
-                <%= link_to 'Edit', ritual, method: :edit, data:{} %>
+                <%= link_to 'Edit', edit_ritual_path(ritual) %>
             </td>
         </tr>
     <% end %>

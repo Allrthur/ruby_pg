@@ -42,7 +42,7 @@ class RitualsController < ApplicationController
   def update
     respond_to do |format|
       if @ritual.update(ritual_params)
-        format.html { redirect_to ritual_url(@ritual), notice: "Ritual was successfully updated." }
+        format.html { redirect_to '/', notice: "Ritual was successfully updated." }
         format.json { render :show, status: :ok, location: @ritual }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -57,7 +57,7 @@ class RitualsController < ApplicationController
 
     respond_to do |format|
       # format.html { redirect_to rituals_url, notice: "Ritual was successfully destroyed." }
-      format.html { redirect_to '/', notice: "Ritual was successfully destroyed." }
+      format.html { redirect_to '/', notice: "Ritual was successfully deleted." }
       format.json { head :no_content }
     end
   end
